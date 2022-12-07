@@ -1,26 +1,61 @@
-html,
-body {
-  padding: 0;
+:root {
+  --toastify-toast-width: 100px;
+}
+.message-box {
+  flex: 0 1 40px;
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  border-top: 1px solid rgba(169, 169, 169, 0.246);
+}
+.message-submit {
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  right: 10px;
+  font-size: 10px;
+}
+.send_btn {
+  color: #fff;
+  border: none;
+  background: #248a52;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 10px;
+  line-height: 1;
+  outline: none !important;
+  transition: background 0.2s ease;
+}
+.attachment-btn {
+  background: #fff;
+  outline: none !important;
+  border: none;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+.send_btn:hover {
+  background: #1d7745;
+}
+.attachment-btn:hover {
+  background: #ebebeb;
+}
+
+.message-box .message-input {
+  background: none;
+  border: none;
+  outline: none !important;
+  resize: none;
+  font-size: 11px;
+  height: 20px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding-right: 20px;
+  width: 265px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+textarea:focus:-webkit-placeholder {
+  color: transparent;
 }
